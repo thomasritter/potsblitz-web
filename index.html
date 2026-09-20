@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />    
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <meta name="apple-mobile-web-app-status-bar" content="#00b0ffa8" />
+    <meta name="theme-color" content="#00b0ffa8" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="icons/ios_icon.png" sizes="52x52">
+    <link rel="icon" type="image/png" href="icons/ipad_icon.png" sizes="172x172">
+    <link rel=”apple-touch-icon” sizes=”52×52″ href="icons/ios_icon.png" />
+    <link rel=”apple-touch-icon” sizes=”172×172″ href="icons/ipad_icon.png" />
+    <title>Potsblitz</title>
+  </head>
+  <body>
+    <div id="root">
+        <div id="title">PotsBlitz <a id="settingsToogle" href="javascript:void();">⚙️</a></div>
+        <table id="wordView">
+          <tr>
+            <td><p id="pseudoWordDisplay"></p></td>
+          </tr>  
+        </table>
+        <div id="wordControls">
+            <nav>
+                <button type="button" class="wordControlButtons" id="previousWordButton">&lt;&lt; Vorheriges</button>
+                <button type="button" class="wordControlButtons" id="showWordButton">Wort anzeigen</button>
+                <button type="button" class="wordControlButtons" id="nextWordButton">Nächstes &gt;&gt;</button>
+                <button type="button" class="wordControlButtons" id="randomWordButton">Zufallswort anzeigen</button>
+            </nav>
+        </div>
+        <script src="js/application.js"></script>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="settingsPopup">
+        <h2>Einstellungen</h2>
+        <h3>Allgemein</h3>
+        <table>
+          <tr>
+            <td><label for="timevisible">Anzeigezeit in Millisekunden:</label></td>
+            <td><input name="timevisible" id="timevisible" size="4"/></td>
+          </tr>
+          <tr>
+            <td><label for="fontsize">Schriftgröße:</label></td>
+            <td><select name="fontsize" id="fontsize">
+              <option value="8pt">8pt</option>
+              <option value="12pt">12pt</option>
+              <option value="16pt">16pt</option>
+              <option value="20pt">20pt</option>
+              <option value="24pt">24pt</option>
+              <option value="28pt">28pt</option>
+              <option value="32pt">32pt</option>
+              <option value="36pt">36pt</option>
+              <option value="40pt">40pt</option>
+              <option value="44pt">44pt</option>
+              <option value="48pt">48pt</option>
+              <option value="52pt">52pt</option>
+              <option value="56pt">56pt</option>
+              <option value="60pt">60pt</option>
+              <option value="64pt">64pt</option>
+              <option value="68pt">68pt</option>
+              <option value="72pt">72pt</option>
+              <option value="76pt">76pt</option>
+              <option value="80pt">80pt</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td><label for="textcolor">Textfarbe wählen:</label></td>
+            <td><input type="color" id="textcolor" name="textcolor"></td>
+          </tr>
+          <tr>
+            <td><label for="vowelColor">Vokalfarbe wählen:</label></td>
+            <td><input type="color" id="vowelColor" name="vowelColor" value="#cc0000"></td>
+          </tr>
+          <tr>
+            <td><label for="backgroundcolor">Hintergrundfarbe wählen:</label></td>
+            <td><input type="color" id="backgroundcolor" name="backgroundcolor" value="#ccccff"></td>
+          </tr>
+        </table>  
+        <h3>Wortliste</h3>
+        <textarea id="wordlist" name="wordlist" cols="33" rows="4"></textarea>
+        <input type="file" id="wordlistFileInput" accept="text/plain" />
+        <h3>Wortanzeige</h3>
+        <div class="checkbox">
+          <input type="checkbox" id="randomWords" name="randomWords">
+          <label for="randomWords">Zufallsreihenfolge</label>
+        </div>  
+        <div class="checkbox">
+          <input type="checkbox" id="worddivider" name="worddivider">
+          <label for="worddivider">Trennzeichen anzeigen</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="highlightvocals" name="highlightvocals">
+          <label for="highlightvocals">Vokale hervorheben</label>
+        </div>
+        <h3>Erfolgsmeldung</h3>
+          <input type="radio" id="wordCounterOff" name="wordCounterGroup" checked="checked">
+          <label for="wordCounterOff">Keine</label><br>
+          <input type="radio" id="wordCounterOn" name="wordCounterGroup">
+          <label for="wordCounterOn">Nach</label> <input name="wordCount" id="wordCount" size="2"/> <label for="wordCounterOff">verschiedenen Wörtern</label><br>
+        <div id="settingsPopupControls">
+          <a id="closeSettingsToggle" href="javascript:void();">Schließen</a>
+        </div>
+      </div>
+    <div id="wordcountFinishedPopup">
+        <img src="images/finished.jpg"/>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "Potsblitz",
+    "short_name": "Potsblitz",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#00b0ffa8",
+    "theme_color": "#00b0ffa8",
+    "orientation": "portrait-primary"
+  }

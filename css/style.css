@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "IQB-Primar";
+     src: url("../fonts/IQBprimar-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+.wordControlButtons { text-decoration: none;
+                      font-size: 16px;
+                      border-radius: 8px;
+                      padding: 10px;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      color: black;
+                      background-color: #f1f1f1; }
+
+html, body, #root { height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    font-family: Arial, Helvetica, sans-serif; }
+
+body { background-color: #00b0ffa8; }
+
+h2 { margin-top: 0px; }
+h3 { padding-bottom: 0px;
+     margin-bottom: 5px; }
+
+#root { display: flex;
+        flex-direction: column; }
+
+#title { color: whitesmoke;
+         font-size: 25px;
+         font-weight: bold;
+         letter-spacing: 0.02em;
+         padding-top: 10px;
+         padding-left: 10px;
+         padding-bottom: 0px; }
+
+#wordView { flex: 1;
+            overflow-y: auto;
+            text-align: center;
+            color:black;
+            font-family:"IQB-Primar", Century Gothic,Arial,sans-serif; 
+       }
+
+#wordControls { height: 100px;
+                width: 100%;
+                display: block;
+                text-align: center;
+                bottom: 10px;
+                width: 100%; }
+
+#overlay { display: none;
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           background: rgb(215, 215, 215);
+           width: 100%;
+           height: 100%;
+           opacity: 0.8;
+           z-index: 100; }
+
+#wordcountFinishedPopup { 
+     display: none;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     background: #fff;
+     width: 300px;
+     height: 300px;
+     overflow: auto;
+     padding: 20px;
+     margin-left: -170px; /*Half the value of width to center div*/
+     margin-top: -220px; /*Half the value of height to center div*/
+     z-index: 200;
+     border-radius: 5px;
+     box-shadow: 0px 0px 2px 2px #9d9d9d; }
+
+#settingsToogle { text-decoration: none; }
+
+#settingsPopup { display: none;
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 background: #fff;
+                 width: 280px;
+                 height: 600px;
+                 overflow: auto;
+                 padding: 20px;
+                 margin-left: -140px; /*Half the value of width to center div*/
+                 margin-top: -330px; /*Half the value of height to center div*/
+                 z-index: 200;
+                 border-radius: 5px;
+                 box-shadow: 0px 0px 2px 2px #9d9d9d;
+                 font-size: 13px; }
+
+#settingsPopupControls { color: black;
+                         font-size: 16px;
+                         padding-left: 0px;
+                         padding-top: 20px; }
+
+#wordlistFileInput { padding-top: 3px;
+                     padding-bottom: 3px; }
+
+.checkbox { padding-bottom: 0px; }
